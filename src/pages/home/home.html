@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    Noch eine Zeile
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item (click)="goToSub()">
+      Unterseite
+    </button>
+    <button ion-item [navPush]="SubPage" [navParams]="params">
+      Unterseite 2
+    </button>
+    <button ion-item (click)="openModal()">
+      Modal
+    </button>
+  </ion-list>
+  <br>
+  The world is your oyster.
+  <p style="height: 2000px;">
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+  </p>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button (click)="scrollToTop()">To Top</button>
+    Hey ho, ich bin ein Footer
+  </ion-toolbar>
+</ion-footer>

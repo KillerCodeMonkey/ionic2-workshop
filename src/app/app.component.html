@@ -1,0 +1,15 @@
+<ion-menu [content]="ionNavElement">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menü</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <button ion-item (click)="takePicture()">Foto aufnehmen</button>
+
+    <img *ngIf="imgSrc" [src]="imgSrc">
+  </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #ionNavElement></ion-nav>

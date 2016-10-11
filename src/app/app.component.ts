@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Platform, Nav } from 'ionic-angular';
 import { Camera, StatusBar } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
+import { SubPage } from '../pages/sub/sub';
 
 
 @Component({
@@ -11,6 +12,7 @@ import { HomePage } from '../pages/home/home';
 export class MyApp {
   rootPage = HomePage;
   imgSrc: string;
+  @ViewChild(Nav) nav: Nav;
 
   constructor(private platform: Platform) {
     platform.ready().then(() => {
@@ -18,6 +20,10 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
     });
+  }
+
+  goToSub() {
+    this.nav.push(SubPage);
   }
 
   takePicture() {

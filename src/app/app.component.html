@@ -6,6 +6,7 @@
   </ion-header>
 
   <ion-content>
+    <button ion-item (click)="goToSub()" menuToggle>Sub Page</button>
     <button ion-item (click)="takePicture()">Foto aufnehmen</button>
 
     <img *ngIf="imgSrc" [src]="imgSrc">
